@@ -347,8 +347,12 @@ def WriteMesh(meshtal_fn, list_array_names, out_format):
 
             else:
                 return 'Invalid array name: {}'.format(array_name)
+            
+            array_name = array_name.replace('\\','-')
+            array_name = array_name.replace('/','-')
 
             new_name = '{}_{}_{}.txt'.format(meshtal.filename[:-4], array_name, out_format)
+
             f = open(new_name, 'w')
             PointCloud(f, f_points, values)
             print('{} created successfully!'.format(new_name))
@@ -368,8 +372,12 @@ def WriteMesh(meshtal_fn, list_array_names, out_format):
 
             else:
                 return 'Invalid array name: {}'.format(array_name)
-
+               
+            array_name = array_name.replace('\\','-')
+            array_name = array_name.replace('/','-')
+            
             new_name = '{}_{}_{}.txt'.format(meshtal.filename[:-4], array_name, out_format)
+
             f = open(new_name, 'w')
             IPFluent(f, meshtal, f_points, values)
             print('{} created successfully!'.format(new_name))
@@ -391,8 +399,12 @@ def WriteMesh(meshtal_fn, list_array_names, out_format):
 
         else:  # Points
             f_points = meshtal.points * scale_factor
-
-        new_name = '{}_{}_{}.csv'.format(meshtal.filename[:-4], str(list_array_names), out_format)
+        
+        array_name = array_name.replace('\\','-')
+        array_name = array_name.replace('/','-')
+        
+        new_name = '{}_{}_{}.csv'.format(meshtal.filename[:-4], array_name, out_format)
+		
         f = open(new_name, 'w', newline='')
         CSV(f, meshtal, f_points, list_array_names)
         print('{} created successfully!'.format(new_name))
