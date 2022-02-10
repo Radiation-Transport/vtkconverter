@@ -1,0 +1,12 @@
+README.md
+setup.py
+vtkconverter/__main__.py
+vtkconverter/vtkConv_functions.py
+vtkconverter/vtkConverter.py
+vtkconverter/vtkconv_functions.py
+vtkconverter/vtkconverter.py
+vtkconverter.egg-info/PKG-INFO
+vtkconverter.egg-info/SOURCES.txt
+vtkconverter.egg-info/dependency_links.txt
+vtkconverter.egg-info/requires.txt
+vtkconverter.egg-info/top_level.txt

@@ -1,0 +1,6 @@
+numpy
+pyvista>=0.32.1
+tqdm
+
+[test]
+unittest

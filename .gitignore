@@ -1,0 +1,13 @@
+# this files are not useful
+*.pyc
+Untitled.ipynb
+.coverage
+
+# These are generated folders for cache 
+.ipynb_checkpoints\
+__pycache__\
+*.pyc
+test\
+build\
+vtkconverter\__pycache__\
+vtkconverter.egg-info\
