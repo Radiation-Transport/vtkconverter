@@ -51,7 +51,9 @@ class MeshTally:
             self.host = self.mesh['host']
             self.path = self.mesh['path']
         except:
-            pass
+            self.author = 'N/A'
+            self.host = 'N/A'
+            self.path = 'N/A'
 
     def __readMeshInfo__(self):
         self.centers = self.mesh.cell_centers().points
