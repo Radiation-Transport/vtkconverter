@@ -158,6 +158,7 @@ safety_menu = """
 def input_files():  # display files to select
     print('\n Input files :')
     list_of_files = list(vC.meshtals.keys())
+    list_of_files = [i.split('/')[-1] for i in list_of_files]
     for i in range(len(list_of_files)):
         print(" - [{}] {}".format(i, list_of_files[i]))
 
@@ -237,7 +238,8 @@ def open():
     filename = tkinter.filedialog.askopenfilename(filetypes=[('vtk files', '.vtk .vts .vtr .vtu')])
     # filename = input(' Write file name :')  Delete 3 rows above and root.destroy() and
     # write this to input the file by writing its filename
-    vC.OpenFile(filename.split('/')[-1])
+    #vC.OpenFile(filename.split('/')[-1])
+    vC.OpenFile(filename)
     root.destroy()
     input_files()
 

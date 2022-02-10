@@ -51,7 +51,9 @@ class MeshTally:
             self.host = self.mesh['host']
             self.path = self.mesh['path']
         except:
-            pass
+            self.author = 'N/A'
+            self.host = 'N/A'
+            self.path = 'N/A'
 
     def __readMeshInfo__(self):
         self.centers = self.mesh.cell_centers().points
@@ -97,7 +99,7 @@ def Open():
     root = tkinter.Tk()
     root.wm_withdraw()  # This completely hides the root window
     filename_path = tkinter.filedialog.askopenfilename(filetypes=[('vtk files', '.vtk .vts .vtr .vtu')])
-    filename = filename_path.split('/')[-1]
+    #filename = filename_path.split('/')[-1]
     OpenFile(filename)
 
     root.destroy()

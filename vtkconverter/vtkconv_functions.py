@@ -99,7 +99,7 @@ def Open():
     root = tkinter.Tk()
     root.wm_withdraw()  # This completely hides the root window
     filename_path = tkinter.filedialog.askopenfilename(filetypes=[('vtk files', '.vtk .vts .vtr .vtu')])
-    filename = filename_path.split('/')[-1]
+    #filename = filename_path.split('/')[-1]
     OpenFile(filename)
 
     root.destroy()

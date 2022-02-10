@@ -29,7 +29,7 @@ where it was installed.
 ## How to use
 
 Once installed the tool can be started by executing the command:
-> python -m VtkConverter.vtkConverter.py
+> python -m vtkConverter.py
 or
 > vtkconverter
 

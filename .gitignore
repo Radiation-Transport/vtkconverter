@@ -7,7 +7,6 @@ Untitled.ipynb
 .ipynb_checkpoints\
 __pycache__\
 *.pyc
-test\
-build\
-vtkconverter\__pycache__\
-vtkconverter.egg-info\
+build
+vtkconverter\__pycache__
+vtkconverter.egg-info
