@@ -1,4 +1,4 @@
-from .vtkconverter import main
+from vtkconverter.main import main
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
