@@ -4,13 +4,13 @@ from vtkconverter import functions
 import numpy as np
 from numpy.testing import assert_array_almost_equal
 
-EXAMPLE_VTK_FILE = "data/example.vts"
+EXAMPLE_VTK_FILE = "tests/data/example.vts"
 
 
 class MyTestCase(unittest.TestCase):
     def test_meshtally(self):
         mesh_tally = functions.MeshTally(EXAMPLE_VTK_FILE)
-        self.assertEqual("data/example.vts", mesh_tally.filename)
+        self.assertEqual("tests/data/example.vts", mesh_tally.filename)
         self.assertEqual(8, mesh_tally.mesh.n_cells)
         self.mesh_tally = mesh_tally
         return
@@ -61,7 +61,7 @@ class MyTestCase(unittest.TestCase):
         mesh_tally = functions.MeshTally(EXAMPLE_VTK_FILE)
         functions.meshtals = {"mesh_name": mesh_tally}
         functions.translate("mesh_name", x=1, y=2, z=3)
-        new_centers = functions.meshtals["data/example+Trans(1,2,3).vts"].centers
+        new_centers = functions.meshtals["tests/data/example+Trans(1,2,3).vts"].centers
         self.assertAlmostEqual(1.5, new_centers[0][0])
         self.assertAlmostEqual(2.5, new_centers[0][1])
         self.assertAlmostEqual(4, new_centers[0][2])
@@ -71,7 +71,7 @@ class MyTestCase(unittest.TestCase):
         mesh_tally = functions.MeshTally(EXAMPLE_VTK_FILE)
         functions.meshtals = {"mesh_name": mesh_tally}
         functions.rotate("mesh_name", theta_z=180)
-        new_centers = functions.meshtals["data/example+Rot(0,0,180).vts"].centers
+        new_centers = functions.meshtals["tests/data/example+Rot(0,0,180).vts"].centers
         self.assertAlmostEqual(-0.5, new_centers[0][0])
         self.assertAlmostEqual(-0.5, new_centers[0][1])
         self.assertAlmostEqual(1, new_centers[0][2])
@@ -82,12 +82,12 @@ class MyTestCase(unittest.TestCase):
         functions.meshtals = {"mesh_name": mesh_tally}
         functions.write_mesh("mesh_name", ["Values"], "point_cloud")
         with open(
-            "data/expected_results/example_Values_point_cloud.txt", "r"
+            "tests/data/expected_results/example_Values_point_cloud.txt", "r"
         ) as infile:
             expected = infile.read()
-        with open("data/example_Values_point_cloud.txt", "r") as infile:
+        with open("tests/data/example_Values_point_cloud.txt", "r") as infile:
             result = infile.read()
-        os.remove("data/example_Values_point_cloud.txt")
+        os.remove("tests/data/example_Values_point_cloud.txt")
         self.assertEqual(expected, result)
         return
 
@@ -95,11 +95,11 @@ class MyTestCase(unittest.TestCase):
         mesh_tally = functions.MeshTally(EXAMPLE_VTK_FILE)
         functions.meshtals = {"mesh_name": mesh_tally}
         functions.write_mesh("mesh_name", ["Values"], "ip_fluent")
-        with open("data/expected_results/example_Values_ip_fluent.txt", "r") as infile:
+        with open("tests/data/expected_results/example_Values_ip_fluent.txt", "r") as infile:
             expected = infile.read()
-        with open("data/example_Values_ip_fluent.txt", "r") as infile:
+        with open("tests/data/example_Values_ip_fluent.txt", "r") as infile:
             result = infile.read()
-        os.remove("data/example_Values_ip_fluent.txt")
+        os.remove("tests/data/example_Values_ip_fluent.txt")
         self.assertEqual(expected, result)
         return
 
@@ -107,11 +107,11 @@ class MyTestCase(unittest.TestCase):
         mesh_tally = functions.MeshTally(EXAMPLE_VTK_FILE)
         functions.meshtals = {"mesh_name": mesh_tally}
         functions.write_mesh("mesh_name", ["Values"], "csv")
-        with open("data/expected_results/example_['Values']_csv.csv", "r") as infile:
+        with open("tests/data/expected_results/example_['Values']_csv.csv", "r") as infile:
             expected = infile.read()
-        with open("data/example_['Values']_csv.csv", "r") as infile:
+        with open("tests/data/example_['Values']_csv.csv", "r") as infile:
             result = infile.read()
-        os.remove("data/example_['Values']_csv.csv")
+        os.remove("tests/data/example_['Values']_csv.csv")
         self.assertEqual(expected, result)
         return
 
