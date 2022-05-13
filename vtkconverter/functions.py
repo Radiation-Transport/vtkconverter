@@ -200,7 +200,7 @@ def translate(meshtal_fn, x=0, y=0, z=0):
             " Mesh type must be either RectilinearGrid, StructuredGrid or UnstructuredGrid"
         )
         return
-    new_meshtal.mesh.translate((x, y, z))
+    new_meshtal.mesh.translate((x, y, z), inplace=True)
     new_meshtal.__read_mesh_info__()
     new_name = (
         meshtal.filename[:-4] + f"+Trans({x},{y},{z})" + new_meshtal.filename[-4:]
@@ -225,9 +225,9 @@ def rotate(
             " Mesh type must be either RectilinearGrid, StructuredGrid or UnstructuredGrid"
         )
         return
-    new_meshtal.mesh.rotate_x(theta_x)
-    new_meshtal.mesh.rotate_y(theta_y)
-    new_meshtal.mesh.rotate_z(theta_z)
+    new_meshtal.mesh.rotate_x(theta_x, inplace=True)
+    new_meshtal.mesh.rotate_y(theta_y, inplace=True)
+    new_meshtal.mesh.rotate_z(theta_z, inplace=True)
     new_meshtal.__read_mesh_info__()
     new_name = (
         meshtal.filename[:-4]
