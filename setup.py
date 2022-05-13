@@ -34,7 +34,7 @@ here = pathlib.Path(__file__).parent.resolve()
 long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
-    name="vtkConverter",
+    name="vtkconverter",
     version="1.1.0",
     description="Tool to analyze, modify and convert VTK files",
     long_description=long_description,
