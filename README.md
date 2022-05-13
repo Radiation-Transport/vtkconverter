@@ -1,9 +1,9 @@
 # VTK Converter
 
-The tool is a Python 3.9 based package that can analize, modify and convert VTK responses
+The tool is a Python 3.6 based package that can analize, modify and convert VTK responses
 to suitable formats for subsequent analyses.
 The tool is used through a text based interactive menu, and it can be run under Windows
-or Linux systems.
+or Linux systems. It requires the use of python 3.6 or a higher version.
 
 ## Installation
 
@@ -17,9 +17,7 @@ where it was installed.
 ## How to use
 
 Once installed the tool can be started by executing the command:
-> python -m vtkConverter.py
-or
-> vtkconverter
+> python -m vtkconverter
 
 Then the command line interface will start-up and prompt the user with several commands like
 open a VTK file, print some information of a mesh and write it in another format.

@@ -1,4 +1,4 @@
-'''
+"""
 ########################################################################################################
 # Copyright 2022 F4E | European Joint Undertaking for ITER and the Development                         #
 # of Fusion Energy (‘Fusion for Energy’). Licensed under the EUPL, Version 1.2                         #
@@ -10,9 +10,9 @@
 # OR CONDITIONS OF ANY KIND, either express or implied. See the Licence permissions                    #
 # and limitations under the Licence.                                                                   #
 ########################################################################################################
-'''
+"""
 
-# CODE: setup.py (module used to install vtkconverter)
+# CODE: setup.py (module used to install vtkConverter)
 
 # LANGUAGE: PYTHON 3.9
 
@@ -31,30 +31,18 @@ import pathlib
 
 here = pathlib.Path(__file__).parent.resolve()
 
-long_description = (here / 'README.md').read_text(encoding='utf-8')
+long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
-    name='vtkconverter',
-    version='1.0.0',
-    description='Tool to analyze, modify and convert VTK files',
+    name="vtkConverter",
+    version="1.1.0",
+    description="Tool to analyze, modify and convert VTK files",
     long_description=long_description,
-    long_description_content_type='text/markdown',
-    author='Xavier Mosquera',
-    keywords='MCNP, VTK, VTS, VTR',
-
-    packages=['vtkconverter'],  # Required
-    python_requires='>=3.6',
-
-    install_requires=['numpy',
-                      'pyvista >= 0.32.1',
-                      'tqdm'],
-    extras_require={
-        'test': ['unittest'],
-    },
-    # entry_points={
-    #     'console_scripts': [
-    #         'vtkconverter = vtkconverter.vtkconverter',
-    #         'vtkConv_functions = vtkconverter.vtkConv_functions'
-    #     ]
-    # }
+    long_description_content_type="text/markdown",
+    author="Xavier Mosquera",
+    keywords="MCNP, VTK, VTS, VTR",
+    packages=["vtkconverter"],  # Required
+    python_requires=">=3.6",
+    install_requires=["numpy", "pyvista >= 0.32.1", "tqdm"],
+    extras_require={"test": ["unittest"],},
 )
