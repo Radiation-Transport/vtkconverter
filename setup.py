@@ -35,7 +35,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="vtkconverter",
-    version="1.1.0",
+    version="1.0.0",
     description="Tool to analyze, modify and convert VTK files",
     long_description=long_description,
     long_description_content_type="text/markdown",
