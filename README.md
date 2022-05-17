@@ -23,7 +23,7 @@ Then the command line interface will start-up and prompt the user with several c
 open a VTK file, print some information of a mesh and write it in another format.
 
 ## Version
-This is the version 1.0 of the tool.
+This is the version 1.0.0 of the tool.
 
 ## Author
 * **Xavier Mosquera** - *Development of the tool* - [Xavier](https://www.linkedin.com/in/xaviermosquera/)
