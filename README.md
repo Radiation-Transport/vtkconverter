@@ -26,7 +26,8 @@ open a VTK file, print some information of a mesh and write it in another format
 This is the version 1.0.0 of the tool.
 
 ## Author
-* **Xavier Mosquera** - *Development of the tool* - [Xavier](https://www.linkedin.com/in/xaviermosquera/)
+* **Xavier Mosquera** - *Development of the initial version of the tool* - [Xavier](https://www.linkedin.com/in/xaviermosquera/)
+* **F4E Radiation-Transport**
 
 ## License
 Copyright 2022 F4E | European Joint Undertaking for ITER and the Development of Fusion Energy (‘Fusion for Energy’).
