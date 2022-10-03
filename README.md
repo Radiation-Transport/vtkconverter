@@ -3,7 +3,7 @@
 The tool is a Python 3.6 based package that can analize, modify and convert VTK responses
 to suitable formats for subsequent analyses.
 The tool is used through a text based interactive menu, and it can be run under Windows
-or Linux systems. It requires the use of python 3.6 or a higher version.
+or Linux systems. It requires the use of python 3.7 or a higher version.
 
 ## Installation
 
