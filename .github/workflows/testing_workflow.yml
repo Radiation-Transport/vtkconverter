@@ -17,10 +17,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Set up Python "3.6"
+      - name: Set up Python "3.7"
         uses: actions/setup-python@v3
         with:
-          python-version: "3.6"
+          python-version: "3.7"
       
       - name: Install dependencies
         run: |
@@ -53,10 +53,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Set up Python "3.6"
+      - name: Set up Python "3.7"
         uses: actions/setup-python@v3
         with:
-          python-version: "3.6"
+          python-version: "3.7"
       
       - name: Install dependencies
         run: |
