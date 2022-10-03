@@ -42,7 +42,7 @@ setup(
     author="Xavier Mosquera",
     keywords="MCNP, VTK, VTS, VTR",
     packages=["vtkconverter"],  # Required
-    python_requires=">=3.6",
-    install_requires=["numpy", "pyvista >= 0.32.1", "tqdm"],
+    python_requires=">=3.7",
+    install_requires=["numpy", "pyvista >= 0.36.1", "tqdm"],
     extras_require={"test": ["unittest"],},
 )
