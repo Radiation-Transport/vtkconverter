@@ -1,3 +1,5 @@
+This module has been updated and integrated into F4Enix as a submodule. Please check [F4Enix](https://github.com/Radiation-Transport/F4Enix/tree/main) and its documentation. All future developments will be done at the [F4Enix](https://github.com/Radiation-Transport/F4Enix/tree/main) project. This page will no longer be maintained.
+
 # VTK Converter
 
 The tool is a Python 3.6 based package that can analize, modify and convert VTK responses
